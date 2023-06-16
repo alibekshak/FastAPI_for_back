@@ -17,7 +17,7 @@ class Config(BaseSettings):
     MONGO_URL: str = ""
 
 
-# environmental variables
+#
 env = Config()
 
 # FastAPI configurations

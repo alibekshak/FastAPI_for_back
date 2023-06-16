@@ -3,7 +3,7 @@ services:
     name: fastapi
     runtime: docker
     plan: free
-    repo: https://github.com/atlekbai/fastapi-boilerplate.git
+    repo: https://github.com/ernurator/nfactorial-incubator-backend-hw-2023.git
     region: frankfurt
     branch: main
     envVars:
@@ -12,4 +12,3 @@ services:
     buildFilter:
       paths:
       - app/**
-  

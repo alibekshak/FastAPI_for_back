@@ -21,22 +21,18 @@ This is a FastAPI boilerplate, which includes includes:
 
 You'll need Docker and Docker Compose to run this application.
 
-1. Build the project
-
-```bash
-docker-compose build
-```
-
-2. Start the project
+1. Start MongoDB and Mongo admin panel
 
 ```bash
 docker-compose up -d
 ```
 
-3. Watch logs
+2. Start the FastAPI server.
 
 ```bash
-docker-compose logs -f app
+poetry install
+poetry shell
+sh ./scripts/launch.sh
 ```
 
 This command will start the FastAPI server on port 8000, the MongoDB service on port 27017 and Mongo admin panel on port 8081.
@@ -54,11 +50,3 @@ The main sections of the project are:
 - `app/auth/router`: Contains the routing logic for the authentication API.
 - `app/auth/adapters`: Contains the JWT management logic.
 - `app/auth/utils`: Contains utility functions, such as password hashing.
-
-## ⚙️ Local Development
-
-```
-poetry install
-poetry shell
-sh ./scripts/launch.sh
-```
